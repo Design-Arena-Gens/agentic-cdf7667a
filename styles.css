@@ -1,0 +1,147 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  width: min(96vw, 480px);
+  padding: 1.5rem;
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.75);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 24px 72px rgba(15, 23, 42, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+header {
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.75rem, 2vw + 1rem, 2.4rem);
+}
+
+p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.75);
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.field span {
+  font-weight: 600;
+}
+
+select,
+button {
+  width: 100%;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.6);
+  color: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+select:focus-visible,
+button:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+  border-color: #38bdf8;
+}
+
+button {
+  margin-top: 0.5rem;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  border: none;
+  color: #0f172a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.result {
+  margin-top: 1.75rem;
+  padding: 1.25rem;
+  border-radius: 16px;
+  background: rgba(148, 163, 184, 0.15);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  display: grid;
+  gap: 0.75rem;
+  min-height: 1.25rem;
+}
+
+.result h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.result-details {
+  display: grid;
+  gap: 0.35rem;
+  color: rgba(226, 232, 240, 0.85);
+}
+
+.result-details strong {
+  color: #38bdf8;
+}
+
+.error {
+  color: #f87171;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: #eef2ff;
+    color: #0f172a;
+  }
+
+  body {
+    background: radial-gradient(circle at top, rgba(14, 165, 233, 0.2), transparent),
+      radial-gradient(circle at bottom, rgba(79, 70, 229, 0.15), transparent);
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 32px 72px rgba(79, 70, 229, 0.15);
+  }
+
+  select,
+  button {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(148, 163, 184, 0.6);
+  }
+
+  .result {
+    background: rgba(244, 244, 255, 0.9);
+    border-color: rgba(148, 163, 184, 0.4);
+  }
+}
